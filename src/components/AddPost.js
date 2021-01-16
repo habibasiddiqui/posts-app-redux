@@ -1,14 +1,15 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import { useDispatch } from 'react-redux';
-import { addPost } from '../store/PostSlice';
+// import { addPost } from '../store/PostSlice';
+import { addpost } from '../store/PostSlice';
 
 function AddPost() {
 
     const [title, setTitle] = useState('');
     const [body, setBody] = useState('');
-    const [post, setPost] = useState('');
+    const [post, setPost] = useState({});
 
     const dispatch = useDispatch();
 
@@ -18,16 +19,23 @@ function AddPost() {
 
     const handleBody = (e) => {
         setBody(e.target.value);
+        // console.log(body)
     }
 
     const handleSubmit = (e) => {
         e.preventDefault();
         setPost({
-            title,
-            body
-        })
-        // console.log(post)
-        dispatch(addPost(post));
+            title: title,
+            body: body
+        });
+        // post returning undefined        
+        console.log(title, body, post)
+
+        // can't use useEffect in handlesubmit???
+        // useEffect( () => {
+        //     dispatch(addpost(post));
+
+        // }, []);
 
     }
 

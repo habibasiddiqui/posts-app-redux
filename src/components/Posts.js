@@ -20,7 +20,7 @@ function Posts() {
                     </div>
                 ))
             ) : (
-                <p>No posts currently</p>
+                <p>Loading...</p>
             )}
             
         </div>
