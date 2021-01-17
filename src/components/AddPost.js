@@ -23,13 +23,14 @@ function AddPost() {
     }
 
     const handleSubmit = (e) => {
-        e.preventDefault();
+        // e.preventDefault();
         setPost({
             title: title,
             body: body
         });
         // post returning undefined        
         console.log(title, body, post)
+        dispatch(addpost('some post object'));
 
         // can't use useEffect in handlesubmit???
         // useEffect( () => {
@@ -41,12 +42,12 @@ function AddPost() {
 
     return (
         <div>
-            <form onSubmit={handleSubmit}>
+            <form className='add-form' onSubmit={handleSubmit}>
                 <br />
-                <TextField onChange={handleTitle} id="outlined-basic" label="Title" variant="outlined" />
+                <TextField className='input-field' fullWidth onChange={handleTitle} id="outlined-basic" label="Title" variant="outlined" />
                 <br />
                 <br />
-                <TextField onChange={handleBody} id="outlined-basic" label="Body" variant="outlined" multiline={true} rows='5' />
+                <TextField className='input-field' fullWidth onChange={handleBody} id="outlined-basic" label="Body" variant="outlined" multiline={true} rows='8' />
                 <br />
                 <br />
                 <Button type='submit' variant="contained" color="primary">

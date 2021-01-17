@@ -12,37 +12,45 @@ code {
     monospace;
 }
 
-.navbar{
-  /* background-color: rgb(129, 93, 187);
-  padding: 20px; */
-}
-
-.main-menu {
-  /* margin: 20px; */
-  background-color: rgb(129, 93, 187);
-  padding: 20px;
-}
-
-.main-menu>li {
-  list-style: none;
-  display: inline-block;
-  
-}
-
-.menu-item{
-  padding: 15px;
-  border-bottom: 2px solid rgb(129, 93, 187);
-  /* color:rgb(25, 2, 61); */
-  color: wheat;
-  font-size: 20px;
-  font-weight: bold;
-  text-decoration: none;
+.navbar {
 
 }
 
-.menu-item:hover {
-    border-bottom: 2px solid rgb(25, 2, 61);
-    color:rgb(25, 2, 61);
-    background-color: wheat;
-    cursor: pointer;
+.main-heading {
+  text-align: center;
+  color: #2c387e;
+  font-size: 50px;
+
+}
+
+.card {
+  border: 0.5px solid lightgray;
+  /* box-shadow: 0 10px 10px 10px #5c6bc0; */
+  width: 75%;
+  margin: 80px auto;
+}
+
+.card-heading {
+  color: #2c387e;
+  font-size: 30px !important;
+  padding-bottom: 10px !important;
+}
+
+.card-content{
+  font-size: 20px !important;
+  padding-top: 10px !important;
+}
+
+.add-form {
+  border: 0.5px solid lightgray;
+  border-radius: 6px !important;
+  width: 75%;
+  margin: 80px auto;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 20px;
+}
+
+.progress {
+  margin: 150px 600px !important;
 }
